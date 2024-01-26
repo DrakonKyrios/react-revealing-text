@@ -1,0 +1,29 @@
+{
+  "name": "@viewtech-labs/rolling-text",
+  "version": "1.0.0",
+  "description": "react component to show text at various increments while scrolling",
+  "main": "index.ts",
+  "module": "dist/esm/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc && vite build"
+  },
+  "keywords": [
+    "react",
+    "component",
+    "text",
+    "visibility"
+  ],
+  "author": "Andres R Toro",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/react": "^18.2.48",
+    "react": "^18.2.0",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vite-plugin-dts": "^3.7.2"
+  },
+  "peerDependencies": {
+    "react": "^18.2.0"
+  }
+}
