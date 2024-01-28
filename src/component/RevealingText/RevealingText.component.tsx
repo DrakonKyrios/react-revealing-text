@@ -1,15 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
 import useRevealingText from "./useRevealingText.hook";
-import { RevealingTextProps } from "./RevealingTextProps.types";
 
-const RevealingText: React.FC<RevealingTextProps> = ({
+export interface RevealingTextProps {
+  text: string;
+  startZoneY: number;
+  endZoneY: number;
+  opacitySharpness?: number;
+  minOpacity: number;
+  className: string;
+}
+
+export const RevealingText: React.FC<RevealingTextProps> = ({
   text,
   startZoneY = 1000,
   endZoneY = 300,
   opacitySharpness = 16,
   minOpacity = 0.1,
   className,
-}) => {
+}: RevealingTextProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
   const { scrollPosition, calcualteOpacityRate, roundDepth } =
@@ -43,5 +51,3 @@ const RevealingText: React.FC<RevealingTextProps> = ({
     </div>
   );
 };
-
-export default RevealingText;

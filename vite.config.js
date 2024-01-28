@@ -12,14 +12,14 @@ export default defineConfig((configEnv) => ({
     react(),
     tsConfigPaths(),
     dts({
-      include: ["src/component/"],
+      include: ["src"],
     }),
   ],
   build: {
     lib: {
-      entry: resolve("src", "component/index.ts"),
+      entry: resolve(__dirname, "src/index.ts"),
       name: "react-revealing-text",
-      formats: ["es", "umd"],
+      formats: ["es"],
       fileName: (format) => `react-revealing-text.${format}.js`,
     },
     rollupOptions: {

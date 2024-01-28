@@ -3,6 +3,8 @@
   "version": "1.0.4",
   "description": "react component to show text at various increments while scrolling",
   "type": "module",
+  "main": "./dist/react-revealing-text.es.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -20,15 +22,6 @@
   "files": [
     "dist"
   ],
-  "exports": {
-    ".": {
-      "import": "./dist/react-revealing-text.es.js",
-      "require": "./dist/react-revealing-text.umd.js"
-    }
-  },
-  "main": "./dist/react-revealing-text.umd.js",
-  "module": "./dist/react-revealing-text.es.js",
-  "types": "./dist/index.d.ts",
   "author": "Andres R Toro",
   "license": "LGPL-3.0-only",
   "devDependencies": {
