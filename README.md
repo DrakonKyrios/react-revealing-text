@@ -11,13 +11,13 @@ A date and time picker in the same React.js component. It can be used as a datep
 Install using npm:
 
 ```sh
-npm install --save @viewtech-labs/reavling-text
+npm install --save @viewtech-labs/revealing-text
 ```
 
 Install using yarn:
 
 ```sh
-yarn add @viewtech-labs/reavling-text
+yarn add @viewtech-labs/revealing-text
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ yarn add @viewtech-labs/reavling-text
 
 ```ts
 // Import the library
-import Datetime from "@viewtech-labs/reavling-text";
+import Datetime from "@viewtech-labs/revealing-text";
 
 // return it from your components
 return <Datetime />;

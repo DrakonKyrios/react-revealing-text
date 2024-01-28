@@ -1,6 +1,6 @@
 {
-  "name": "@viewtech-labs/reavling-text",
-  "version": "1.0.0",
+  "name": "@viewtech-labs/revealing-text",
+  "version": "1.0.4",
   "description": "react component to show text at various increments while scrolling",
   "type": "module",
   "scripts": {
@@ -22,12 +22,12 @@
   ],
   "exports": {
     ".": {
-      "import": "./dist/react-reavling-text.es.js",
-      "require": "./dist/react-reavling-text.umd.js"
+      "import": "./dist/react-revealing-text.es.js",
+      "require": "./dist/react-revealing-text.umd.js"
     }
   },
-  "main": "./dist/react-reavling-text.umd.js",
-  "module": "./dist/react-reavling-text.es.js",
+  "main": "./dist/react-revealing-text.umd.js",
+  "module": "./dist/react-revealing-text.es.js",
   "types": "./dist/index.d.ts",
   "author": "Andres R Toro",
   "license": "LGPL-3.0-only",
