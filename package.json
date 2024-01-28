@@ -1,29 +1,52 @@
 {
-  "name": "@viewtech-labs/rolling-text",
+  "name": "@viewtech-labs/reavling-text",
   "version": "1.0.0",
   "description": "react component to show text at various increments while scrolling",
-  "main": "index.ts",
-  "module": "dist/esm/index.js",
-  "types": "dist/index.d.ts",
+  "type": "module",
   "scripts": {
-    "build": "tsc && vite build"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
   },
   "keywords": [
     "react",
     "component",
+    "reveal",
     "text",
+    "design",
+    "cosmetic",
     "visibility"
   ],
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "import": "./dist/react-reavling-text.es.js",
+      "require": "./dist/react-reavling-text.umd.js"
+    }
+  },
+  "main": "./dist/react-reavling-text.umd.js",
+  "module": "./dist/react-reavling-text.es.js",
+  "types": "./dist/index.d.ts",
   "author": "Andres R Toro",
-  "license": "ISC",
+  "license": "LGPL-3.0-only",
   "devDependencies": {
     "@types/react": "^18.2.48",
+    "@vitejs/plugin-react": "^4.2.1",
     "react": "^18.2.0",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
-    "vite-plugin-dts": "^3.7.2"
+    "vite-plugin-dts": "^3.7.2",
+    "vite-plugin-linter": "^2.1.1",
+    "vite-tsconfig-paths": "^4.3.1"
   },
   "peerDependencies": {
     "react": "^18.2.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DrakonKyrios/react-revealing-text"
+  },
+  "homepage": "https://github.com/DrakonKyrios/react-revealing-text#readme"
 }
