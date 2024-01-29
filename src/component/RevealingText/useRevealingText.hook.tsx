@@ -25,17 +25,19 @@ const useRevealingText = () => {
     index: number = 0,
     length: number = 0
   ) => {
+    const adjustedStartZoneY = startZoneY > offset ? offset : startZoneY;
+
     // Reduce rerendering with opacity is oustide of range
     if (scrollPosition > offset - endZoneY) {
       return 1;
     }
 
-    if (scrollPosition < offset - startZoneY) {
+    if (scrollPosition < offset - adjustedStartZoneY) {
       return 0;
     }
 
-    const startingPosition = scrollPosition - (offset - startZoneY);
-    const increment = (endZoneY - startZoneY) / length;
+    const startingPosition = scrollPosition - (offset - adjustedStartZoneY);
+    const increment = (endZoneY - adjustedStartZoneY) / length;
     const ratio = (startingPosition / (increment * index)) * 1.2;
 
     //Creating an inverse exponential curve for revealing text. The higher opacitySharpness = sharper

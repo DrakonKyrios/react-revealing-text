@@ -1,10 +1,8 @@
 # react-revealing-text
 
-[![npm version](https://badge.fury.io/js/react-revealing-text.svg)](http://badge.fury.io/js/react-revealing-text)
+[![npm version](https://badge.fury.io/js/@viewtech-labs%2Frevealing-text.svg)](https://badge.fury.io/js/@viewtech-labs%2Frevealing-text)
 
-A date and time picker in the same React.js component. It can be used as a datepicker, timepicker or both at the same time. It is **highly customizable** and it even allows to edit date's milliseconds.
-
-**Version 3 is out!** These are the docs for version 3 of the library. If you are still using the deprecated v2, [here it is its documentation](https://github.com/arqex/react-datetime/blob/2a83208452ac5e41c43fea31ef47c65efba0bb56/README.md), but we strongly recommend to migrate to version 3 in order to keep receiving updates. Please check [migrating react-datetime to version 3](migrateToV3.md) to safely update your app.
+A react text container component that reveals letter by letter as you scroll through the page. I originally saw this in a youtube video but wanted to recreate this effect regardless of the content.
 
 ## Installation
 
@@ -22,21 +20,30 @@ yarn add @viewtech-labs/revealing-text
 
 ## Usage
 
-[React.js](http://facebook.github.io/react/) and [Moment.js](http://momentjs.com/) are peer dependencies for react-datetime (as well as [Moment.js timezones](https://momentjs.com/timezone/) if you want to use the `displayTimeZone` prop). These dependencies are not installed along with react-datetime automatically, but your project needs to have them installed in order to make the datepicker work. You can then use the datepicker like in the example below.
-
 ```ts
 // Import the library
-import Datetime from "@viewtech-labs/revealing-text";
+import { RevealingText } from "@viewtech-labs/revealing-text";
 
 // return it from your components
-return <Datetime />;
+return (
+  <RevealingText
+    className="[&>span]:text-3xl [&>span]:text-gray-50 [&>span]:font-bold"
+    startZoneY={1000}
+    endZoneY={300}
+    opacitySharpness={16}
+    minOpacity={0.1}
+    text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius,
+      eveniet voluptate! Quia at atque voluptas quis distinctio ut
+      labore! Error ad sapiente voluptatem fuga rerum tenetur quod.
+      Sit, modi minima. Lorem ipsum dolor sit amet, consectetur
+      adipisicing elit. Eius, eveniet voluptate! Quia at atque
+      voluptas quis distinctio ut labore! Error ad sapiente voluptatem
+      fuga rerum tenetur quod. Sit, modi minima."
+  />
+);
 ```
 
 [See this example working](https://codesandbox.io/s/boring-dew-uzln3).
-
-Do you want more examples? [Have a look at our resources gallery](resources.md).
-
-**Don't forget to add the [CSS stylesheet](https://github.com/arqex/react-datetime/blob/master/css/react-datetime.css) to make it work out of the box.**. You only need to do this once in your app:
 
 ## API
 

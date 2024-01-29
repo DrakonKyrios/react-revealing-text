@@ -1,6 +1,6 @@
 {
   "name": "@viewtech-labs/revealing-text",
-  "version": "1.0.4",
+  "version": "1.0.6",
   "description": "react component to show text at various increments while scrolling",
   "type": "module",
   "main": "./dist/react-revealing-text.es.js",
