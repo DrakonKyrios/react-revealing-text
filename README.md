@@ -43,7 +43,7 @@ return (
 );
 ```
 
-[See this example working](https://codesandbox.io/s/boring-dew-uzln3).
+[See this example working](https://codesandbox.io/p/sandbox/revealing-text-forked-7h6ssg?file=%2Fsrc%2Fstyles.css%3A3%2C22).
 
 ## API
 
